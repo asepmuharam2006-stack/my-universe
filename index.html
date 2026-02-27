@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Fitri Ratna Wulan, My Forever & Always ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&family=Dancing+Script:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff4d6d;
+            --primary-dark: #ff1f4b;
+            --secondary: #ff85a1;
+            --glass: rgba(255, 255, 255, 0.82);
+            --rose-gold: rgba(255, 183, 197, 0.7);
+            --text: #4a4a4a;
+        }
+
+        body {
+            margin: 0; height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+            /* Latar belakang malam berbintang yang magis */
+            background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533440);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            display: flex; justify-content: center; align-items: center;
+            overflow: hidden;
+            color: #fff; /* Teks dasar di latar belakang */
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Starry Night Effect */
+        .stars {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: transparent; z-index: 1; pointer-events: none;
+        }
+        .star {
+            position: absolute; width: 2px; height: 2px;
+            background: rgba(255,255,255,0.8); border-radius: 50%;
+            animation: twinkle var(--duration) ease-in-out infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        /* Sakura / Petal Rain Effect */
+        .petal {
+            position: absolute; background-color: #ffb7c5;
+            border-radius: 150% 0 150% 0;
+            animation: petal-fall linear infinite;
+            pointer-events: none; z-index: 2;
+        }
+        @keyframes petal-fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        }
+
+        .container {
+            width: 88%; max-width: 440px;
+            min-height: 520px;
+            /* Premium Glassmorphism */
+            background: var(--glass);
+            backdrop-filter: blur(18px) saturate(180%);
+            -webkit-backdrop-filter: blur(18px) saturate(180%);
+            border-radius: 40px;
+            padding: 35px;
+            box-shadow: 0 30px 60px rgba(255, 77, 109, 0.35);
+            text-align: center;
+            border: 3px solid var(--rose-gold); /* Rose Gold Border */
+            position: relative; z-index: 10;
+            transition: all 0.5s ease;
+            color: var(--text); /* Warna teks di dalam card */
+        }
+
+        .slide { display: none; animation: dramaticZoomIn 0.8s cubic-bezier(0.19, 1, 0.22, 1); }
+        .slide.active { display: block; }
+
+        @keyframes dramaticZoomIn {
+            0% { opacity: 0; transform: scale(0.3) translateY(50px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .photo-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 15px; margin: 25px 0;
+        }
+        .photo-grid img {
+            width: 100%; height: 140px;
+            object-fit: cover; border-radius: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .photo-grid img:first-child { grid-column: span 2; height: 210px; }
+
+        h1 { font-family: 'Pacifico', cursive; color: var(--primary); font-size: 2.2rem; margin: 10px 0; }
+        h2 { font-family: 'Dancing Script', cursive; color: #d63384; font-size: 1.8rem; margin: 15px 0; font-weight: 700; line-height: 1.2;}
+        .quote { font-family: 'Dancing Script', cursive; font-size: 1.9rem; color: var(--primary-dark); margin: 20px 0; line-height: 1.1; }
+        .handwritten { font-family: 'Caveat', cursive; font-size: 1.6rem; color: #555; font-weight: 700; margin-bottom: 20px;}
+        p { color: var(--text); line-height: 1.8; font-size: 1.05rem; font-weight: 500; margin-bottom: 15px;}
+        .small-love-text { font-family: 'Quicksand', sans-serif; font-size: 0.8rem; color: var(--secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;}
+
+        button {
+            background: linear-gradient(135deg, #ff4d6d, #ff85a1);
+            color: white; border: none;
+            padding: 16px 45px; border-radius: 50px;
+            font-weight: 700; cursor: pointer; transition: 0.4s ease;
+            box-shadow: 0 12px 25px rgba(255, 77, 109, 0.45);
+            margin-top: 25px; text-transform: uppercase; letter-spacing: 1.5px;
+            font-size: 1rem;
+        }
+        button:hover { transform: scale(1.08) translateY(-3px); box-shadow: 0 18px 35px rgba(255, 77, 109, 0.6); }
+
+        .heart-icon { color: var(--primary); font-size: 1.6rem; animation: pulsebeat 1s infinite; display: inline-block; margin-right: 5px;}
+        @keyframes pulsebeat {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.4); opacity: 1; }
+        }
+
+        #final-heart { font-size: 6rem; animation: pulsebeat 1.5s infinite; color: var(--primary); margin: 30px 0;}
+    </style>
+</head>
+<body>
+
+    <div class="stars" id="stars-container"></div>
+    <div id="petal-container"></div>
+
+    <div class="container">
+        <div class="slide active" id="slide1">
+            <div class="heart-icon">❤️</div>
+            <h1>Halo, Fitri..</h1>
+            <p class="small-love-text">My Dearest One</p>
+            <p class="handwritten">At this very beautiful moment, I have a long, heartfelt message, dedicated just for you.</p>
+            <p>Ada sebuah pesan panjang dan mendalam yang ingin aku sampaikan, khusus untukmu, di hari yang sangat indah ini.</p>
+            <button onclick="nextSlide(2)">Buka Pintu Hatiku ✨</button>
+        </div>
+
+        <div class="slide" id="slide2">
+            <h2>Our Love is a Story</h2>
+            <p class="quote">"If I had a flower for every time I thought of you, I could walk through my garden forever."</p>
+            <p>Fitri, duniaku berubah total sejak ada kamu. <span class="heart-icon">💕</span></p>
+            <p>Dulu, aku pernah membayangkan tentang bahagia, tapi tak pernah menyangka definisi bahagia itu sesederhana namamu. You've taught me how to love deeply and unconditionally.</p>
+            <button onclick="nextSlide(3)">Cintaku ❤️</button>
+        </div>
+
+        <div class="slide" id="slide3">
+            <div class="small-love-text">Today is all about you</div>
+            <h1>Happy Birthday, Cantik! 🎉</h1>
+            <h2>Jiwaku, Semestaku.. <span class="heart-icon">💖</span></h2>
+            <p>Selamat bertambah usia untuk jiwa paling cantik yang pernah aku kenal. <span class="heart-icon">🎂</span> May your life be filled with nothing but happiness, and your steps guided by the warmest light.</p>
+            <p>Semoga setiap langkahmu selalu dipenuhi cahaya kebaikan, kesuksesan, dan keberkahan yang tak terhingga.</p>
+            <button onclick="nextSlide(4)">Keinginanku... 🌸</button>
+        </div>
+
+        <div class="slide" id="slide4">
+            <p class="small-love-text">Gratitude from my soul</p>
+            <p class="handwritten">My heart is so full of thankfulness...</p>
+            <p>Terima kasih ya... Terima kasih sudah memilihku untuk menjadi tempatmu bercerita, menjadi pendengar setiamu. <span class="heart-icon">🏡</span></p>
+            <p>Terima kasih sudah mengizinkanku menjadi bagian dari perjalanan hidupmu yang luar biasa ini. I will never take your love for granted.</p>
+            <button onclick="nextSlide(5)">Jangan Berhenti ✨</button>
+        </div>
+
+        <div class="slide" id="slide5">
+            <div class="small-love-text">Our Forever</div>
+            <p class="quote">"No matter where we go, I'm okay as long as I'm with you."</p>
+            <p>Tetaplah menjadi Fitri yang kuat, Fitri yang ceria, dan Fitri yang selalu membuatku jatuh cinta berkali-kali setiap harinya. <span class="heart-icon">💍</span></p>
+            <p>You're the peace I've been searching for my entire life. Aku janji akan selalu ada di sini, bersamamu.</p>
+            <button onclick="nextSlide(6)">Janji Aku... ❤️</button>
+        </div>
+
+        <div class="slide" id="slide6">
+            <p class="small-love-text">My solemn promise to you</    p>
+            <h1>I Promise You...</h1>
+            <p>Aku mungkin tidak sempurna, tapi aku berjanji untuk selalu mencoba menjadi alasan di balik senyummu. <span class="heart-icon">🤝</span></p>
+            <p>I will not let you face the world alone. Aku tidak akan membiarkanmu menghadapi dunia sendirian, di setiap tantangan dan rintangan yang ada.</p>
+            <button onclick="nextSlide(7)">Satu Hal Lagi ❤️</button>
+        </div>
+
+        <div class="slide" id="slide7">
+            <h2>Memori yang Tersimpan</h2>
+            <p class="small-love-text">A Journey Through Time</p>
+            <p class="quote">"We do not remember days, we remember moments."</p>
+            <p>Fitri, sebelum kita sampai ke doa penutup, aku nambahin foto-foto kamu juga, semoga kamu suka yaa cantik... <span class="heart-icon">📸</span></p>
+            <button onclick="nextSlide(8)">Buka Album Kenangan 💖</button>
+        </div>
+
+        <div class="slide" id="slide8">
+            <div class="photo-grid">
+                <img src="foto1.jpg" onerror="this.src='https://placehold.co/400x300/ff9a9e/fff?text=Moment+1'">
+                <img src="foto2.jpg" onerror="this.src='https://placehold.co/400x300/ff9a9e/fff?text=Moment+2'">
+                <img src="foto3.jpg" onerror="this.src='https://placehold.co/400x300/ff9a9e/fff?text=Moment+3'">
+            </div>
+            <p class="handwritten">Your smile is the most magical work of art to me.</p>
+            <p>Setiap senyumanmu adalah keajaiban bagiku.</p>
+            <button onclick="nextSlide(9)">Foto Berikutnya ✨</button>
+        </div>
+
+        <div class="slide" id="slide9">
+            <div class="photo-grid">
+                <img src="foto4.jpg" onerror="this.src='https://placehold.co/400x300/ff9a9e/fff?text=Moment+4'">
+                <img src="foto5.jpg" onerror="this.src='https://placehold.co/400x300/ff9a9e/fff?text=Moment+5'">
+                <img src="foto6.jpg" onerror="this.src='https://placehold.co/400x300/ff9a9e/fff?text=Moment+6'">
+            </div>
+            <p class="handwritten">With you, I feel like I have everything.</p>
+            <p>Bersamamu, aku merasa telah memiliki segalanya.</p>
+            <button onclick="nextSlide(10)">Doa Terbaikku 🙏</button>
+        </div>
+
+        <div class="slide" id="slide10">
+            <div class="small-love-text">My Deepest Prayer</div>
+            <h1>A Special Prayer for You... 🙏</h1>
+            <p>Di usiamu yang ke 23 ini, aku berdoa agar Tuhan selalu menjagamu lebih dari aku menjagamu. Semoga kesehatan, kesuksesan, dan kebahagiaan yang tak terputus selalu menyertaimu.</p>
+            <p class="quote">I Love You so Much, Fitri Ratna Wulan.</p>
+            <p class="handwritten">Together, forever, and beyond...</p>
+            <p class="small-love-text">with all my love</p>
+            <div id="final-heart">💖</div>
+        </div>
+    </div>
+
+    <script>
+        // Start effects immediately when body loads
+        window.addEventListener('load', function() {
+            createStars();
+            startRain(); // Petal rain starts on Slide 1
+        });
+
+        function nextSlide(n) {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            document.getElementById('slide' + n).classList.add('active');
+            
+            // Add extra effects starting slide 10
+            if(n === 10) {
+                spawnExtraHearts();
+            }
+        }
+
+        // Starry Night Effect
+        function createStars() {
+            const container = document.getElementById('stars-container');
+            for(let i = 0; i < 80; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.setProperty('--duration', (Math.random() * 3 + 1.5) + 's');
+                container.appendChild(star);
+            }
+        }
+
+        // Sakura/Petal Rain Effect
+        function startRain() {
+            const container = document.getElementById('petal-container');
+            // Initial call to start immediately
+            petalCycle(container);
+            // Continuous cycle
+            setInterval(() => { petalCycle(container); }, 200);
+        }
+
+        function petalCycle(container) {
+            const petal = document.createElement('div');
+            petal.classList.add('petal');
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.width = Math.random() * 16 + 10 + 'px';
+            petal.style.height = petal.style.width;
+            petal.style.animationDuration = Math.random() * 3 + 2.5 + 's';
+            container.appendChild(petal);
+            setTimeout(() => petal.remove(), 6000);
+        }
+
+        // Final Heart Spawner starting Slide 10
+        function spawnExtraHearts() {
+            const container = document.getElementById('petal-container');
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.innerHTML = ['❤️', '💖', '✨', '🌸'][Math.floor(Math.random() * 4)];
+                heart.style.position = 'absolute';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animation = 'petal-fall 4s linear infinite';
+                heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+                container.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }, 300);
+        }
+    </script>
+</body>
+</html>
